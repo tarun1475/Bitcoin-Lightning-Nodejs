@@ -1,0 +1,12 @@
+{
+  "port" : 7001,
+
+  "dbLiveSettings" : {
+    "host"     : "localhost",
+    "user"     : "root",
+    "password" : "",
+    "database" : "bittmax_live",
+    "connectionLimit" : 15
+  }
+  
+}

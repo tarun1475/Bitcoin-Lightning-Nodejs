@@ -1,0 +1,32 @@
+{
+  "name": "bittmax-app-backend",
+  "version": "1.0.0",
+  "description": "Server serving APIs to bittmax-app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "genDocs": "node_modules/.bin/jsdoc -c docs/conf.json -t node_modules/docdash/ routes/*.js"
+  },
+  "author": "Tarun Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "apn": "^1.7.6",
+    "async": "^2.0.0-rc.5",
+    "aws-sdk": "^2.4.8",
+    "body-parser": "^1.15.1",
+    "config": "^1.20.3",
+    "crypto": "0.0.3",
+    "docdash": "^0.4.0",
+    "express": "^4.13.4",
+    "jsdoc": "^3.4.0",
+    "morgan": "^1.7.0",
+    "multer": "^1.1.0",
+    "mysql": "^2.10.2",
+    "node-gcm": "^0.14.3",
+    "nodemailer": "^2.4.2",
+    "nodemailer-smtp-transport": "^2.5.0",
+    "request": "^2.72.0",
+    "serve-favicon": "^2.2.0",
+    "cors": "~2.7.1"
+  }
+}
