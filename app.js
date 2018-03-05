@@ -16,7 +16,8 @@ var favicon             = require('serve-favicon');
 var error               = require('./routes/error');
 var users               = require('./routes/users');
 var utils               = require('./routes/commonfunctions');
-var otpAuth             = require('./routes/otpAuth');
+var bittmaxAuth        = require('./routes/bittmax-auth');
+var usersAuth          = require('./routes/users-auth');
 var app                 = express();
 
 connection              = undefined;
@@ -76,30 +77,12 @@ var storage = multer.diskStorage({
 });
 var upload = multer({storage: storage});
 
-/*
-  * OTP apis 
-  */
+//All Routes for Handling different operations
 
+app.use('/bittmax-auth', bittmaxAuth);
 
-app.post('/bittmax-auth/send_otp' ,utils.logRequest
-  , otpAuth.sendOtp
-  , error);
+app.use('/users-auth', usersAuth);
 
-app.post('/bittmax-auth/verify_otp' ,utils.logRequest
-  , otpAuth.verifyOtp
-  , error);
-
-/*
-  * User apis 
-  */
-
-// app.post('/bittmax-auth/sign_up_user' , utils.logRequest
-//   , users.signUpuser
-//   , error);
-
-// app.post('/bittmax-auth/login_user' , utils.logRequest
-//   , users.loginUser
-//   , error);
 
 
 
