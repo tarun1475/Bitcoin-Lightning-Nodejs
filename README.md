@@ -1,11 +1,11 @@
 # README #
 
-This is the back-end https server for bittmax application. 
+This is the back-end http server for Otp verification application. 
 
 ### What is this repository for? ###
 
 //Hello tutorial
-* bittmax-app-backend 
+* max-app-backend 
 * 0.0.1
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
@@ -33,5 +33,5 @@ When running in cluster mode, you have to gracefully reload the server(addressin
 ```
 #!python
 
-pm2 gracefulReload bittmax:7001
+pm2 gracefulReload max:7001
 ```

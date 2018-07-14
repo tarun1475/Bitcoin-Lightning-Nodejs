@@ -11,13 +11,10 @@ var bodyParser          = require('body-parser');
 var fs                  = require('fs');
 var cors                = require('cors');
 var logger              = require('morgan');
-var multer              = require('multer');
-var favicon             = require('serve-favicon');
 var error               = require('./routes/error');
-var users               = require('./routes/users');
 var utils               = require('./routes/commonfunctions');
-var bittmaxAuth        = require('./routes/bittmax-auth');
-var usersAuth          = require('./routes/users-auth');
+var maxAuth             = require('./routes/max-auth');
+var usersAuth           = require('./routes/users-auth');
 var app                 = express();
 
 connection              = undefined;
@@ -79,9 +76,8 @@ var upload = multer({storage: storage});
 
 //All Routes for Handling different operations
 
-app.use('/bittmax-auth', bittmaxAuth);
-
-app.use('/users-auth', usersAuth);
+app.use('/max-auth', maxAuth);
+// app.use('/users-auth', usersAuth);
 
 
 
