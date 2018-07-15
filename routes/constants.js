@@ -21,6 +21,15 @@ define(exports.responseFlags, "NOT_AUTHORIZED"      , 403);
 define(exports.responseFlags, "INTERNAL_SERVER_ERR" , 500);
 define(exports.responseFlags, "NOT_FOUND"           , 404);
 
+
+/**
+ * Bittrex Base Urls
+ */
+exports.baseUrl = {};
+define(exports.baseUrl, "PUBLIC"       , "https://bittrex.com/api/v1.1/public");
+define(exports.baseUrl, "MARKET"     , "https://bittrex.com/api/v1.1/market");
+define(exports.baseUrl, "ACCOUNT"       , "https://bittrex.com/api/v1.1/account");
+
 /**
  * Common response sent during database execution error
  * @type {{log: string, flag: number}}

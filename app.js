@@ -13,7 +13,7 @@ var cors                = require('cors');
 var logger              = require('morgan');
 var error               = require('./routes/error');
 var utils               = require('./routes/commonfunctions');
-var maxAuth             = require('./routes/max-auth');
+var bittrexPublic       = require('./routes/bittrex-public');
 var usersAuth           = require('./routes/users-auth');
 var app                 = express();
 
@@ -76,7 +76,7 @@ var upload = multer({storage: storage});
 
 //All Routes for Handling different operations
 
-app.use('/max-auth', maxAuth);
+app.use('/bittrex-public', bittrexPublic);
 // app.use('/users-auth', usersAuth);
 
 
