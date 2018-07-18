@@ -3,7 +3,7 @@ var error   		= require('./error');
 var bittrexRoutes   = require('./bittrexRoutes');
 
 
-bittrexRoutes.getTicker("BTC-ETH");
+bittrexRoutes.getOpenOrders();
 
 
 

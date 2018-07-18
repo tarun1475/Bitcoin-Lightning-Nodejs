@@ -1,13 +1,10 @@
 # README #
 
-This is the back-end http server for Otp verification application. 
+Implementation of Bittrex Client in Nodejs. 
 
 ### What is this repository for? ###
 
-//Hello tutorial
-* max-app-backend 
-* 0.0.1
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+This repo is for developers who want to integrate Bittrex Exchange apis in their app using  nodejs. All Public & Private Routes have been implemented and tested.
 
 ### How do I get set up? ###
 
@@ -21,17 +18,4 @@ npm install
 ```
 * to install dependencies
 
-```
-#!bash
 
-NODE_ENV=development node app.js
-```
-
-When running in cluster mode, you have to gracefully reload the server(addressing all clusters with the common alias).
-
-
-```
-#!python
-
-pm2 gracefulReload max:7001
-```
