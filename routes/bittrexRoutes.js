@@ -154,5 +154,8 @@ module.exports ={
 	getTicker,
 	getOrderBook,
 	getMarketHistory,
-	getOpenOrders
+	getOpenOrders,
+	cancel,
+	buyLimit,
+	sellLimit
 };
