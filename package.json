@@ -1,6 +1,6 @@
 {
   "name": "bittrex-js-client",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Implementation of Bittrex Endpoints in Nodejs including public & private routes",
   "main": "bittrexRoutes.js",
   "scripts": {
@@ -9,6 +9,11 @@
   },
   "author": "Tarun Gupta",
   "license": "ISC",
+  "keywords":[
+    "Nodejs Bittrex Client",
+    "bittrex js client",
+    "bittrex node wrapper"
+  ],
   "dependencies": {
     "body-parser": "^1.15.1",
     "crypto": "0.0.3",

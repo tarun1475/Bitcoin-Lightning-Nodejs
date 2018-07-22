@@ -30,11 +30,6 @@ define(exports.baseUrl, "PUBLIC"       , "https://bittrex.com/api/v1.1/public");
 define(exports.baseUrl, "MARKET"     , "https://bittrex.com/api/v1.1/market");
 define(exports.baseUrl, "ACCOUNT"       , "https://bittrex.com/api/v1.1/account");
 
-// Bittrex Secret Key
-
-exports.bittrexCredentials = {};
-define(exports.bittrexCredentials, "KEY", "3f3f6a47e4064edab36fb3917d3e2a6a");
-define(exports.bittrexCredentials, "SECRET", "59327574fb42489f81df078ece36f258");
 
 /**
  * Common response sent during database execution error

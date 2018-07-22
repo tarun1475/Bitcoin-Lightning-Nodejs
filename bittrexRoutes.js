@@ -3,8 +3,8 @@ var constants = require('./constants');
 const crypto = require('crypto');
 
 
-function calculateSign(url){
-	var sign=crypto.createHmac('sha512',constants.bittrexCredentials.SECRET); 
+function calculateSign(url,options){
+	var sign=crypto.createHmac('sha512',options.secret); 
 
 	sign = sign.update(url,'ascii');
 	sign = sign.digest('hex');
@@ -69,14 +69,14 @@ var getMarketHistory = (market) => {
 //All Market Routes
 
 
-var buyLimit  = (market, quantity, rate) => {
+var buyLimit  = (market, quantity, rate,options) => {
 	$nonce=Date.now(); 
-	var uri= constants.baseUrl.MARKET+'/buylimit?apikey='+constants.bittrexCredentials.KEY+'&nonce='+$nonce+'&market='+market+'&quantity='+quantity+'&rate='+rate; 
+	var uri= constants.baseUrl.MARKET+'/buylimit?apikey='+options.key+'&nonce='+$nonce+'&market='+market+'&quantity='+quantity+'&rate='+rate; 
 	var options = {
 		  url: uri,
 		  headers: {
 		    'content-type': 'application/json',
-		    'apisign':calculateSign(uri)
+		    'apisign':calculateSign(uri,options)
 		  }
 
 		};
@@ -88,14 +88,14 @@ var buyLimit  = (market, quantity, rate) => {
 };
 
 
-var sellLimit  = () => {
+var sellLimit  = (market,quantity,rate,options) => {
 	$nonce=Date.now(); 
-	var uri= constants.baseUrl.MARKET+'/sellLimit?apikey='+constants.bittrexCredentials.KEY+'&nonce='+$nonce+'&market='+market+'&quantity='+quantity+'&rate='+rate; 
+	var uri= constants.baseUrl.MARKET+'/sellLimit?apikey='+options.key+'&nonce='+$nonce+'&market='+market+'&quantity='+quantity+'&rate='+rate; 
 	var options = {
 		  url: uri,
 		  headers: {
 		    'content-type': 'application/json',
-		    'apisign':calculateSign(uri)
+		    'apisign':calculateSign(uri,options)
 		  }
 
 		};
@@ -106,14 +106,14 @@ var sellLimit  = () => {
 
 };
 
-var cancel  = (uuid) => {
+var cancel  = (uuid,options) => {
 	$nonce=Date.now(); 
-	var uri= constants.baseUrl.MARKET+'/cancel?apikey='+constants.bittrexCredentials.KEY+'&nonce='+$nonce+'&uuid='+uuid; 
+	var uri= constants.baseUrl.MARKET+'/cancel?apikey='+options.key+'&nonce='+$nonce+'&uuid='+uuid; 
 	var options = {
 		  url: uri,
 		  headers: {
 		    'content-type': 'application/json',
-		    'apisign':calculateSign(uri)
+		    'apisign':calculateSign(uri,options)
 		  }
 
 		};
@@ -124,14 +124,14 @@ var cancel  = (uuid) => {
 
 };
 
-var getOpenOrders  = () => {
+var getOpenOrders  = (options) => {
 	$nonce=Date.now(); 
-	var uri= constants.baseUrl.MARKET+'/getopenorders?apikey='+constants.bittrexCredentials.KEY+'&nonce='+$nonce; 
+	var uri= constants.baseUrl.MARKET+'/getopenorders?apikey='+options.key+'&nonce='+$nonce; 
 	var options = {
 		  url: uri,
 		  headers: {
 		    'content-type': 'application/json',
-		    'apisign':calculateSign(uri)
+		    'apisign':calculateSign(uri,options)
 		  }
 
 		};
