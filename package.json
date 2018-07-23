@@ -1,5 +1,5 @@
 {
-  "name": "bitcoin-lightening-nodejs",
+  "name": "bitcoin-lightning-nodejs",
   "version": "1.0.1",
   "description": "Implementation of gRPC API reference documentation for LNDin Nodejs , the Lightning Network Daemon.",
   "main": "lightning.js",
@@ -10,9 +10,9 @@
   "author": "Tarun Gupta",
   "license": "ISC",
   "keywords": [
-    "Bitcoin Lightening Client",
-    "Lightening js client",
-    "Lightening node wrapper"
+    "Bitcoin lightning Client",
+    "lightning js client",
+    "lightning node wrapper"
   ],
   "dependencies": {
     "body-parser": "^1.15.1",
