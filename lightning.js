@@ -173,59 +173,21 @@ lightning.verifyMessage(request, function(err, response) {
   })
 };
 
-// var connectPeerRequest = () => {
-	
-// };
+module.exports = {
+  generateSeed,
+  initiateWallet,
+  verifyMessageRequest,
+  signMessageRequest,
+  newWitnessAddressRequest,
+  newAddressRequest,
+  sendManyRequest,
+  getTransactionsRequest,
+  sendCoinsRequest,
+  getTransactions,
+  channelBalanceRequest,
+  walletBalanceRequest,
+  changeWalletPassword,
+  unlockWalletRequest  
+};
 
-// var disconnectPeerRequest = () => {
-	
-// };
-
-// var listPeersRequest = () => {
-	
-// };
-
-// var getInfoRequest = () => {
-	
-// };
-
-// var pendingChannelsRequest = () => {
-	
-// };
-
-// var listChannelsRequest = () => {
-	
-// };
-
-// var closedChannelsRequest = () => {
-	
-// };
-
-// var openChannelRequest = () => {
-	
-// };
-
-// var openChannel = () => {
-	
-// };
-
-// var closeChannelRequest = () => {
-	
-// };
-
-// var sendRequest = () => {
-	
-// };
-
-// var sendRequestSync = () => {
-	
-// };
-
-// var sendToRouteRequest = () => {
-	
-// };
-
-// var sendToRouteRequestSync = () => {
-	
-// };
 
