@@ -1,20 +1,33 @@
-var fs = require('fs');
 var grpc = require('grpc');
-var lnrpc = grpc.load('rpc.proto').lnrpc;
-process.env.GRPC_SSL_CIPHER_SUITES = 'HIGH+ECDSA'
-var lndCert = fs.readFileSync('LND_DIR/tls.cert');
-var sslCreds = grpc.credentials.createSsl(lndCert);
-var walletUnlocker = new lnrpc.WalletUnlocker('localhost:10009', sslCreds);
-
+var fs = require("fs");
+var auth = require('./auth');
+var protoLoader = require('@grpc/proto-loader');
+// Suggested options for similarity to existing grpc.load behavior
+var packageDefinition = protoLoader.loadSync(
+    'rpc.proto',
+    {keepCase: true,
+     longs: String,
+     enums: String,
+     defaults: true,
+     oneofs: true
+    });
+var protoDescriptor = grpc.loadPackageDefinition(packageDefinition);
+// The protoDescriptor object has the full package hierarchy
+var lnrpc = protoDescriptor.lnrpc;
 
 var macaroonCreds = grpc.credentials.createFromMetadataGenerator(function(args, callback) {
-    var macaroon = fs.readFileSync("LND_DIR/admin.macaroon").toString('hex');
+    var macaroon = fs.readFileSync(auth.config.AUTH).toString('hex');
     var metadata = new grpc.Metadata()
     metadata.add('macaroon', macaroon);
     callback(null, metadata);
   });
+
+
+var lndCert = fs.readFileSync(auth.config.CERT);
+var sslCreds = grpc.credentials.createSsl(lndCert);
+var walletUnlocker = new lnrpc.WalletUnlocker(auth.config.HOST, sslCreds);
 var creds = grpc.credentials.combineChannelCredentials(sslCreds, macaroonCreds);
-var lightning = new lnrpc.Lightning('localhost:10009', creds);
+var lightning = new lnrpc.Lightning(auth.config.HOST, creds);
 
 
 

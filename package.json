@@ -1,6 +1,6 @@
 {
   "name": "bitcoin-lightning-nodejs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Implementation of gRPC API reference documentation for LNDin Nodejs , the Lightning Network Daemon.",
   "main": "lightning.js",
   "scripts": {
@@ -15,9 +15,10 @@
     "lightning node wrapper"
   ],
   "dependencies": {
+    "@grpc/proto-loader": "^0.3.0",
     "body-parser": "^1.15.1",
     "crypto": "0.0.3",
-    "grpc": "^1.13.0",
+    "grpc": "^1.13.1",
     "request": "^2.72.0"
   }
 }

@@ -19,6 +19,12 @@ This package is for developers who want to integrate Bitcoin lightning Network i
 * npm i bitcoin-lightning-nodejs
 * make sure you have node installed on your machine
 
+
+### How to setup tls.cert, maroons.admin , channel host ? ###
+
+Check auth.js : 
+
+
 # Examples #
 
 # GenSeed #
