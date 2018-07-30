@@ -20,7 +20,7 @@ This package is for developers who want to integrate Bitcoin lightning Network i
 * make sure you have node installed on your machine
 
 
-### How to setup tls.cert, maroons.admin , channel host ? ###
+### How to setup tls.cert, macaroon.admin , channel host ? ###
 
 Check https://github.com/tarun1475/Bitcoin-Lightning-Nodejs/blob/master/auth.js
 
