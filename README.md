@@ -209,12 +209,8 @@ Bitcoin Address: 14AaoxQLQ92rpMsXSKPAYs5yetCLkB64KF
 Ether Address: 0x92c0ba99b59dba211b70de410ab3513bd25de408
 
 
+### Core Contributor
 
-
-Developer Email: tarunkumargupta14@gmail.com
-
-Future Tasks: Implementation of Daemon & Payment Channel related functions.
-
-Project Repository: https://github.com/lightningnetwork/lnd 
+* ([Tarun Gupta](https://github.com/tarun1475))
 
 
