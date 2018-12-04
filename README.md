@@ -205,6 +205,7 @@ lightning.verifyMessageRequest(msg , signature, (err , res) => {
 ## Donating
 
 Bitcoin Address: 14AaoxQLQ92rpMsXSKPAYs5yetCLkB64KF
+
 Ether Address: 0x92c0ba99b59dba211b70de410ab3513bd25de408
 
 ---
