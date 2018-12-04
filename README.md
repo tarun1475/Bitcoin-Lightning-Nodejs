@@ -211,8 +211,10 @@ Ether Address: 0x92c0ba99b59dba211b70de410ab3513bd25de408
 ---
 
 
-Developer Email: tarunkumargupta14@gmail.com 
+Developer Email: tarunkumargupta14@gmail.com
+
 Future Tasks: Implementation of Daemon & Payment Channel related functions.
-Project Repository https://github.com/lightningnetwork/lnd 
+
+Project Repository: https://github.com/lightningnetwork/lnd 
 
 
