@@ -26,17 +26,17 @@ Check https://gitlab.com/coinsafedev/bitcoin-lightning-nodejs/blob/master/auth.j
 
 ## Table of contents
 
-- [Generate Seed](#GenSeed)
-- [Initiate Wallet](#Initiate-Wallet)
-- [Unlock Wallet](#Unlock-Wallet)
-- [Change Wallet Password](#Change-Wallet-Password)
-- [Wallet Balance](#Wallet-Balance)
-- [Channel Balance](#Channel-Balance)
-- [Get Transactions ](#Get-Transactions)
-- [Send Coins](#Send-Coins)
-- [Subscribe Trasactions](#Subscribe-Trasactions)
-- [Send Multiple Requests](#Send-Multiple-Requests)
-- [**All Available Options**](#New-Address)
+- [Generate Seed](#genseed)
+- [Initiate Wallet](#initiate-wallet)
+- [Unlock Wallet](#unlock-wallet)
+- [Change Wallet Password](#change-wallet-password)
+- [Wallet Balance](#wallet-balance)
+- [Channel Balance](#channel-balance)
+- [Get Transactions ](#get-transactions)
+- [Send Coins](#send-coins)
+- [Subscribe Trasactions](#subscribe-trasactions)
+- [Send Multiple Requests](#send-multiple-requests)
+- [All Available Options](#new-address)
 
 ---
 
