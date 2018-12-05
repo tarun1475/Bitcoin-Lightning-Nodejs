@@ -186,6 +186,19 @@ lightning.verifyMessage(request, function(err, response) {
   })
 };
 
+var connectPeer = (addr , perm) => {
+
+  var request = { 
+    addr: addr, 
+    perm: perm
+  } 
+
+  lightning.connectPeer(request, function(err, response) {
+    console.log(response);
+  })
+};
+
+
 module.exports = {
   generateSeed,
   initiateWallet,
@@ -200,7 +213,11 @@ module.exports = {
   channelBalanceRequest,
   walletBalanceRequest,
   changeWalletPassword,
-  unlockWalletRequest  
+  unlockWalletRequest,
+  connectPeer,
+
+
+
 };
 
 

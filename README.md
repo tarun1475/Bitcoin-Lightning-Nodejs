@@ -202,6 +202,19 @@ lightning.verifyMessageRequest(msg , signature, (err , res) => {
 
 ```
 
+## Connect Peer 
+
+ConnectPeer attempts to establish a connection to a remote peer. This is at the networking level, and is used for communication between nodes. This is distinct from establishing a channel with a peer.
+
+```js
+var lightning = require('bitcoin-lightning-nodejs');
+
+lightning.connectPeer(addr , perm, (err , res) => {
+
+});
+
+```
+
 ## Donating
 
 Bitcoin Address: 14AaoxQLQ92rpMsXSKPAYs5yetCLkB64KF
